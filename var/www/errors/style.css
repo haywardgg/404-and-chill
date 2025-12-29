@@ -1,0 +1,108 @@
+:root {
+    --bg: #0b1020;
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #60a5fa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background:
+        radial-gradient(1200px 600px at 10% -10%, #1e293b 0%, transparent 40%),
+        radial-gradient(900px 500px at 90% 110%, #020617 0%, transparent 40%),
+        var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    max-width: 580px;
+    width: calc(100% - 2rem);
+    padding: 2.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
+    text-align: center;
+}
+
+.code {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-top: .4rem;
+    color: var(--muted);
+}
+
+.joke {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+.geo {
+    margin-top: .5rem;
+    font-size: .95rem;
+    color: #94a3b8;
+}
+
+.path {
+    margin: 1.5rem 0;
+    padding: .75rem 1rem;
+    background: rgba(0,0,0,.35);
+    border-radius: 10px;
+    font-family: ui-monospace, monospace;
+    font-size: .9rem;
+    color: #cbd5f5;
+    word-break: break-all;
+}
+
+.actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    text-decoration: none;
+    padding: .7rem 1.2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(37,99,235,.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.button.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    box-shadow: none;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.footer {
+    margin-top: 2rem;
+    font-size: .8rem;
+    color: var(--muted);
+}
