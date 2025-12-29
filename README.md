@@ -53,3 +53,8 @@ sudo nginx -t && sudo systemctl reload nginx
 - 🚦 **Rate-limit hint:** Adds headers like `Retry-After` as a gentle nudge for noisy bots without affecting real visitors.
 
 With these bits combined, you get an error page that looks great, protects your SEO, and is friendly to both humans and crawlers. 🎉
+
+## Screenshot
+
+<img width="800" height="800" alt="Page Not Found" src="https://github.com/user-attachments/assets/dca4ec71-2aea-47a3-b7b9-38caa5afc1b9" />
+
