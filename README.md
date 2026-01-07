@@ -25,12 +25,19 @@ location = /404.css {
     root /var/www/errors;
 }
 
+```
+
+### 2) Reference the limit_req_zone in `nginx.conf`
+
+Inside your `http { ... }` block (or a specific `server` block), pull in the snippet:
+
+```nginx
 limit_req_zone $binary_remote_addr zone=404limit:10m rate=5r/m;
 ```
 
-### 2) Reference the include in `nginx.conf`
+### 3) Reference the include in `nginx.conf`
 
-Inside your `http { ... }` block (or a specific `server` block), pull in the snippet:
+Inside your `http { ... }` block (or a specific `server` block), add this line:
 
 ```nginx
 include /etc/nginx/inc/error-pages.conf;
